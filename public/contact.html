@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>闪闪</title>
+    <link rel="stylesheet" href="./content.css">
+    <style>
+        .banner {
+            height: 500px;
+            background-color: aliceblue;
+            line-height: 500px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sanUi-content" id="sanUi-content">
+        <div class="header header-contact">
+            <div class="home" id="headerHome"></div>
+            <div class="title"></div>
+        </div>
+        <div class="left">
+            <div class="menus">
+                <div class="menus-item menus-item-1"></div>
+                <div class="menus-item menus-item-2"></div>
+                <div class="menus-item menus-item-3"></div>
+                <div class="menus-item menus-item-4"></div>
+                <div class="menus-item menus-item-5"></div>
+                <div class="menus-item menus-item-6"></div>
+            </div>
+            <div class="footer">
+                <div class="logo" id="logo"></div>
+                <div class="about" id="about"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="banner">主页信息，整张切图</div>
+        </div>
+    </div>
+</body>
+<script>
+    // 判断终端
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod" ];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    if (!IsPC()) {
+        document.getElementById('sanUi-content').classList.add('sanUi-content-m')
+    }
+    // menu导航跳转
+    var menus = document.getElementsByClassName('menus-item');
+    menus = Array.from(menus);
+    var linkList = [
+        '/sanUi/poster.html',
+        '/sanUi/type.html',
+        '/sanUi/typography.html',
+        '/sanUi/branding.html',
+        '/sanUi/visual.html',
+        '/sanUi/photo.html'
+    ]
+    menus.forEach(function (item, index) {
+        item.addEventListener('click', function () {
+            window.location.href = linkList[index]
+        })
+    })
+
+    // 跳转首页 联系我
+    var logo = document.getElementById('logo');
+    var about = document.getElementById('about');
+    var headerHome = document.getElementById('headerHome');
+    logo.addEventListener('click', function () {
+        window.location.href = '/sanUi/index.html'
+    })
+    about.addEventListener('click', function () {
+        window.location.href = '/sanUi/contact.html'
+    })
+    headerHome.addEventListener('click', function () {
+        window.location.href = '/sanUi/index.html'
+    })
+</script>
+</html>

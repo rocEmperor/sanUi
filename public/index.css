@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    background-color: #F7F7F5;
+}
+/* pc端样式 */
+.sanUi-home-pc {
+    background-color: #F7F7F5;
+    padding: 50px 0;
+    width: 890px;
+    display: inline-block;
+}
+.sanUi-home-pc .menu .menu-item {
+    height: 35px;
+    background: url('http://www.designtang.com/img/I-00.jpg') no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+.sanUi-home-pc .menu .menu-item-1:hover {
+    background: url('http://www.designtang.com/img/I-01.jpg') no-repeat;
+}
+.sanUi-home-pc .menu .menu-item-2:hover {
+    background: url('http://www.designtang.com/img/I-02.jpg') no-repeat;
+}
+.sanUi-home-pc .menu .menu-item-3:hover {
+    background: url('http://www.designtang.com/img/I-03.jpg') no-repeat;
+}
+.sanUi-home-pc .menu .menu-item-4:hover {
+    background: url('http://www.designtang.com/img/I-04.jpg') no-repeat;
+}
+.sanUi-home-pc .menu .menu-item-5:hover {
+    background: url('http://www.designtang.com/img/I-05.jpg') no-repeat;
+}
+.sanUi-home-pc .menu .menu-item-6:hover {
+    background: url('http://www.designtang.com/img/I-06.jpg') no-repeat;
+}
+.sanUi-home-pc .footer {
+    text-align: left;
+    margin-top: 124px;
+    position: relative;
+}
+.sanUi-home-pc .footer .logo {
+    height: 40px;
+    background: url('http://www.designtang.com/img/logo.png') no-repeat;
+    background-size: 100%;
+}
+.sanUi-home-pc .footer .about {
+    position: absolute;
+    height: 20px;
+    width: 130px;
+    top: 0;
+    left: 135px;
+    cursor: pointer;
+}
+
+/* 移动端样式 */
+.sanUi-home-m {
+    padding: 50px 30px;
+}
+.sanUi-home-m .menu .menu-item {
+    height: 30px;
+    background-color: #8A8A89;
+    margin-bottom: 26px;
+    position: relative;
+}
+.sanUi-home-m .menu .menu-item-2, .sanUi-home-m .menu .menu-item-4, .sanUi-home-m .menu .menu-item-6 {
+    background-color: #000000;
+}
+.sanUi-home-m .menu-item .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sanUi-home-m .menu-item-1 .icon {
+    height: 11px;
+    width: 100.7px;
+    background: url('http://www.designtang.com/img/poster-m.png') no-repeat;
+    background-size: 100% 100%;
+}
+.sanUi-home-m .menu-item-2 .icon {
+    height: 11px;
+    width: 134.5px;
+    background: url('http://www.designtang.com/img/typeface-m.png') no-repeat;
+    background-size: 100% 100%;
+}
+.sanUi-home-m .menu-item-3 .icon {
+    height: 11px;
+    width: 178.5px;
+    background: url('http://www.designtang.com/img/typography-m.png') no-repeat;
+    background-size: 100% 100%;
+}
+.sanUi-home-m .menu-item-4 .icon {
+    height: 11px;
+    width: 138px;
+    background: url('http://www.designtang.com/img/branding-m.png') no-repeat;
+    background-size: 100% 100%;
+}
+.sanUi-home-m .menu-item-5 .icon {
+    height: 11px;
+    width: 97.5px;
+    background: url('http://www.designtang.com/img/visual-m.png') no-repeat;
+    background-size: 100% 100%;
+}
+.sanUi-home-m .menu-item-6 .icon {
+    height: 11px;
+    width: 199.6px;
+    background: url('http://www.designtang.com/img/photography.png') no-repeat;
+    background-size: 100% 100%;
+}
+.sanUi-home-m .footer {
+    margin: 130px 20px 0 20px;
+    height: 24px;
+    background: url('http://www.designtang.com/img/foot4.png') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.sanUi-home-m .footer .about {
+    position: absolute;
+    height: 12px;
+    width: 104px;
+    top: 0;
+    left: 85px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>闪闪</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="sanUi-home" id="sanUi-home">
+        <div class="menu">
+            <div class="menu-item menu-item-1">
+                <div class="icon"></div>
+            </div>
+            <div class="menu-item menu-item-2">
+                <div class="icon"></div>
+            </div>
+            <div class="menu-item menu-item-3">
+                <div class="icon"></div>
+            </div>
+            <div class="menu-item menu-item-4">
+                <div class="icon"></div>
+            </div>
+            <div class="menu-item menu-item-5">
+                <div class="icon"></div>
+            </div>
+            <div class="menu-item menu-item-6">
+                <div class="icon"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logo"></div>
+            <div class="about" id="ABOUT"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var baseName = 'sanUi-home';
+    var container = document.getElementById(baseName)
+    // 判断终端
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod" ];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    if (IsPC()) { // pc端
+        container.classList.add('sanUi-home-pc')
+    } else { // 移动端
+        container.classList.add('sanUi-home-m')
+    }
+    
+    // menu 导航跳转
+    var linkList = [
+        '/sanUi/poster.html',
+        '/sanUi/type.html',
+        '/sanUi/typography.html',
+        '/sanUi/branding.html',
+        '/sanUi/visual.html',
+        '/sanUi/photo.html'
+    ]
+    var menus = document.getElementsByClassName('menu-item');
+    menus = Array.from(menus);
+    menus.forEach(function (item, index) {
+        item.addEventListener('click', function () {
+            window.location.href = linkList[index]
+        })
+    })
+
+    // 跳转联系我页面
+    var about = document.getElementById('ABOUT');
+    about.addEventListener('click', function () {
+        window.location.href = '/sanUi/contact.html'
+    })
+</script>
+</html>

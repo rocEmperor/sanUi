@@ -1,0 +1,20 @@
+{
+  "name": "sanui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index",
+    "dev": "cross-env NODE_ENV=development pm2 start ecosystem.config.js",
+    "pro": "cross-env NODE_ENV=production pm2 start ecosystem.config.js",
+    "stop": "pm2 stop base",
+    "log": "pm2 log",
+    "delete": "pm2 delete base",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
